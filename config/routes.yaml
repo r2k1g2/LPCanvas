@@ -1,3 +1,26 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+helloResponse:
+  path: /helloController
+  controller: App\Controller\HelloController::helloAction
+
+# Put the most restrictive function at the top
+lockedNumber:
+  path: /helloController/{number}
+  controller: App\Controller\HelloController::lockedNumberAction
+  # You need to put this to lock the type of parameter
+  requirements:
+    number: \d+
+
+number:
+  path: /helloController/{number}
+  controller: App\Controller\HelloController::numberAction
+
+
+putMethod:
+  path: /put
+  controller: App\Controller\HelloController::putAction
+  methods: PUT
+  # do 'curl -X PUT localhost:8000/put' in the root directory of the project to see if the method works
