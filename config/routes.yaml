@@ -24,3 +24,93 @@ putMethod:
   controller: App\Controller\HelloController::putAction
   methods: PUT
   # do 'curl -X PUT localhost:8000/put' in the root directory of the project to see if the method works
+
+# USER Related
+
+user:
+  path: /user
+  controller: App\Controller\UserController::userAction
+
+userNew:
+  path: /user/{lastName}/{firstName}
+  controller: App\Controller\UserController::userNew
+
+userList:
+  path: /user/list
+  controller: App\Controller\UserController::userList
+
+
+
+# AIRPORT Related
+
+airport:
+  path: /airport
+  controller: App\Controller\Airport\AirportController::listAirports
+  methods: GET
+
+airportShow:
+  path: /airport/{id}
+  controller: App\Controller\Airport\AirportController::showAirport
+  methods: GET
+
+airportDelete:
+  path: /airport/{id}
+  controller: App\Controller\Airport\AirportController::deleteAirport
+  methods: DELETE
+
+
+
+# FLIGHT Related
+
+flight:
+  path: /flight
+  controller: App\Controller\Airport\FlightController::listFlights
+  methods: GET
+
+flightShow:
+  path: /flight/{id}
+  controller: App\Controller\Airport\FlightController::showFlight
+  methods: GET
+
+flightDelete:
+  path: /flight/{id}
+  controller: App\Controller\Airport\FlightController::deleteFlight
+  methods: DELETE
+
+
+
+# PILOT Related
+
+pilot:
+  path: /pilot
+  controller: App\Controller\Airport\PilotController::listPilots
+  methods: GET
+
+pilotShow:
+  path: /pilot/{id}
+  controller: App\Controller\Airport\PilotController::showPilot
+  methods: GET
+
+pilotDelete:
+  path: /pilot/{id}
+  controller: App\Controller\Airport\PilotController::deletePilot
+  methods: DELETE
+
+
+
+# PLANE Related
+
+plane:
+  path: /plane
+  controller: App\Controller\Airport\PlaneController::listPlanes
+  methods: GET
+
+planeShow:
+  path: /plane/{id}
+  controller: App\Controller\Airport\PlaneController::showPlane
+  methods: GET
+
+planeDelete:
+  path: /plane/{id}
+  controller: App\Controller\Airport\PlaneController::deletePlane
+  methods: DELETE
