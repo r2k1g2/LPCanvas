@@ -57,9 +57,8 @@ class Pilot
      * @param $updated_at
      * @param $created_at
      */
-    public function __construct($id, $first_name, $last_name, $birth_date, $hiring_date, $updated_at, $created_at)
+    public function __construct($first_name, $last_name, $birth_date, $hiring_date, $updated_at, $created_at)
     {
-        $this->id = $id;
         $this->first_name = $first_name;
         $this->last_name = $last_name;
         $this->birth_date = $birth_date;

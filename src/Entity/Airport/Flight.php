@@ -18,12 +18,12 @@ class Flight
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Airport\Airport", mappedBy="Airport", orphanRemoval=true)
+     * @ORM\Column(name="departure_airport", type="integer")
      */
     private $departure_airport;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Airport\Airport", mappedBy="Airport", orphanRemoval=true)
+     * @ORM\Column(name="arrival_airport", type="integer")
      */
     private $arrival_airport;
 
@@ -38,7 +38,7 @@ class Flight
     private $arrival_departure;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Airport\Pilot", mappedBy="Pilot", orphanRemoval=true)
+     * @ORM\Column(name="main_pilot", type="integer")
      */
     private $main_pilot;
 
@@ -51,9 +51,8 @@ class Flight
      * @param $arrival_departure
      * @param $main_pilot
      */
-    public function __construct($id, $departure_airport, $arrival_airport, $departure_datetime, $arrival_departure, $main_pilot)
+    public function __construct($departure_airport, $arrival_airport, $departure_datetime, $arrival_departure, $main_pilot)
     {
-        $this->id = $id;
         $this->departure_airport = $departure_airport;
         $this->arrival_airport = $arrival_airport;
         $this->departure_datetime = $departure_datetime;

@@ -1,3 +1,8 @@
+# Useful commands
+# php bin/console doctrine:mapping:info
+# php bin/console doctrine:query:sql "SELECT * FROM pilot"
+# php composar.php install
+
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
@@ -42,75 +47,21 @@ userList:
 
 
 # AIRPORT Related
-
 airport:
-  path: /airport
-  controller: App\Controller\Airport\AirportController::listAirports
-  methods: GET
-
-airportShow:
-  path: /airport/{id}
-  controller: App\Controller\Airport\AirportController::showAirport
-  methods: GET
-
-airportDelete:
-  path: /airport/{id}
-  controller: App\Controller\Airport\AirportController::deleteAirport
-  methods: DELETE
-
-
+  resource: './routes/airport.yaml'
+  prefix: /airport
 
 # FLIGHT Related
-
 flight:
-  path: /flight
-  controller: App\Controller\Airport\FlightController::listFlights
-  methods: GET
-
-flightShow:
-  path: /flight/{id}
-  controller: App\Controller\Airport\FlightController::showFlight
-  methods: GET
-
-flightDelete:
-  path: /flight/{id}
-  controller: App\Controller\Airport\FlightController::deleteFlight
-  methods: DELETE
-
-
+  resource: './routes/flight.yaml'
+  prefix: /flight
 
 # PILOT Related
-
 pilot:
-  path: /pilot
-  controller: App\Controller\Airport\PilotController::listPilots
-  methods: GET
-
-pilotShow:
-  path: /pilot/{id}
-  controller: App\Controller\Airport\PilotController::showPilot
-  methods: GET
-
-pilotDelete:
-  path: /pilot/{id}
-  controller: App\Controller\Airport\PilotController::deletePilot
-  methods: DELETE
-
-
+  resource: './routes/pilot.yaml'
+  prefix: /pilot
 
 # PLANE Related
-
 plane:
-  path: /plane
-  controller: App\Controller\Airport\PlaneController::listPlanes
-  methods: GET
-
-planeShow:
-  path: /plane/{id}
-  controller: App\Controller\Airport\PlaneController::showPlane
-  methods: GET
-
-planeDelete:
-  path: /plane/{id}
-  controller: App\Controller\Airport\PlaneController::deletePlane
-  methods: DELETE
+  resource: './routes/plane.yaml'
+  prefix: /plane

@@ -4,6 +4,7 @@
 namespace App\Serializer\Airport;
 
 
+use App\Entity\Airport\Flight;
 use Symfony\Component\Serializer\Exception\CircularReferenceException;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
@@ -20,7 +21,7 @@ class FlightSerializer implements ContextAwareNormalizerInterface
      */
     public function supportsNormalization($data, string $format = null, array $context = [])
     {
-        // TODO: Implement supportsNormalization() method.
+        return $data instanceof Flight;
     }
 
     /**

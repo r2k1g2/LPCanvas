@@ -1,0 +1,25 @@
+
+airport:
+  path: /
+  controller: App\Controller\Airport\AirportController::listAirports
+  methods: GET
+
+airportCreate:
+  path: /create
+  controller: App\Controller\Airport\AirportController::createAirport
+  methods: ['PUT', 'GET']
+
+airportShow:
+  path: /{id}
+  controller: App\Controller\Airport\AirportController::showAirport
+  methods: GET
+
+airportUpdate:
+  path: /{id}
+  controller: App\Controller\Airport\AirportController::updateAirport
+  methods: PATCH
+
+airportDelete:
+  path: /{id}
+  controller: App\Controller\Airport\AirportController::deleteAirport
+  methods: DELETE

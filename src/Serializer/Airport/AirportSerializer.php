@@ -4,6 +4,7 @@
 namespace App\Serializer\Airport;
 
 
+use App\Entity\Airport\Airport;
 use Symfony\Component\Serializer\Exception\CircularReferenceException;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
@@ -43,8 +44,8 @@ class AirportSerializer implements ContextAwareNormalizerInterface
     {
         return [
             'id' => $object->getId(),
-            'code' => $object->getFirstName(),
-            'name' => $object->getLastName(),
+            'code' => $object->getCode(),
+            'name' => $object->getName(),
         ];
     }
 }

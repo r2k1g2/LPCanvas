@@ -1,0 +1,25 @@
+
+pilot:
+  path: /
+  controller: App\Controller\Airport\PilotController::listPilots
+  methods: GET
+
+pilotCreate:
+  path: /create
+  controller: App\Controller\Airport\PilotController::createPilot
+  methods: ['PUT', 'GET']
+
+pilotShow:
+  path: /{id}
+  controller: App\Controller\Airport\PilotController::showPilot
+  methods: GET
+
+pilotUpdate:
+  path: /{id}
+  controller: App\Controller\Airport\PilotController::updatePilot
+  methods: PATCH
+
+pilotDelete:
+  path: /{id}
+  controller: App\Controller\Airport\PilotController::deletePilot
+  methods: DELETE

@@ -29,13 +29,11 @@ class Airport
 
     /**
      * Airport constructor.
-     * @param $id
      * @param $code
      * @param $name
      */
-    public function __construct($id, $code, $name)
+    public function __construct($code, $name)
     {
-        $this->id = $id;
         $this->code = $code;
         $this->name = $name;
     }

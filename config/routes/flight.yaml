@@ -1,0 +1,25 @@
+
+flight:
+  path: /
+  controller: App\Controller\Airport\FlightController::listFlights
+  methods: GET
+
+flightCreate:
+  path: /create
+  controller: App\Controller\Airport\FlightController::createFlight
+  methods: ['PUT', 'GET']
+
+flightShow:
+  path: /{id}
+  controller: App\Controller\Airport\FlightController::showFlight
+  methods: GET
+
+flightUpdate:
+  path: /{id}
+  controller: App\Controller\Airport\FlightController::updateFlight
+  methods: PATCH
+
+flightDelete:
+  path: /{id}
+  controller: App\Controller\Airport\FlightController::deleteFlight
+  methods: DELETE

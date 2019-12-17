@@ -39,15 +39,13 @@ class Plane
 
     /**
      * Plane constructor.
-     * @param $id
      * @param $name
      * @param $model
      * @param $code
      * @param $manufacturer
      */
-    public function __construct($id, $name, $model, $code, $manufacturer)
+    public function __construct($name, $model, $code, $manufacturer)
     {
-        $this->id = $id;
         $this->name = $name;
         $this->model = $model;
         $this->code = $code;

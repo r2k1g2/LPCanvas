@@ -1,0 +1,27 @@
+
+plane:
+  path: /
+  controller: App\Controller\Airport\PlaneController::listPlanes
+  methods: GET
+
+# curl -i -X PATCH -d name='Le Pas Si Gros Avion' http://localhost:8000/plane/11
+planeCreate:
+  path: /
+  controller: App\Controller\Airport\PlaneController::createPlane
+  methods: ['PUT', 'GET']
+
+# curl -i -X PUT -d airplaneName='Super Avions' -d model='super model'-d airplaneCode='wowCode' http://localhost:8000/plane/
+planeUpdate:
+  path: /{id}
+  controller: App\Controller\Airport\PlaneController::updatePlane
+  methods: PATCH
+
+planeShow:
+  path: /{id}
+  controller: App\Controller\Airport\PlaneController::showPlane
+  methods: GET
+
+planeDelete:
+  path: /{id}
+  controller: App\Controller\Airport\PlaneController::deletePlane
+  methods: DELETE
